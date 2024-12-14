@@ -1,0 +1,2 @@
+# Blazorwind
+Tailwindcss Sample
