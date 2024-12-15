@@ -2,9 +2,40 @@
 
 <PageTitle>Home</PageTitle>
 
-<div class="container">
-    <h1 class="font-gemunu text-gega-red">Hello, world!</h1>
+@* Header section *@
+<header class="bg-black py-12 text-gega-grey font-gemunu">
+    @* Header Container *@
+    <div class="container flex items-center justify-between space-x-16">
+        @* Logo *@
+        <a href="#" class="text-6xl font-bold text-transparent bg-gradient-to-r bg-clip-text from-gega-red to-gega-grey">ghostNoté</a>
+        @* Navigation *@
+        <nav class="flex justify-between flex-1">
+            @* Menu *@
+            <div class="flex items-center text-lg space-x-8">
+                <a href="#" class="hover:text-gega-melon duration-300">movies</a>
+                <a href="#" class="hover:text-gega-melon duration-300">celebrities</a>
+                <a href="#" class="hover:text-gega-melon duration-300">blog</a>
+                <a href="#" class="hover:text-gega-melon duration-300">news</a>
+                <a href="#" class="hover:text-gega-melon duration-300">about</a>
+            </div>
+            @* Login area *@
+            <div class="flex items-center space-x-8">
+                @* Search area *@
+                <form>
+                    <div class="group border-r border-gega-red px-4 mx-4 py-1">
+                        <input type="text" class="opacity-0 group-hover:opacity-100 bg-transparent border-b border-gega-red focus:outline-none 
+                                w-44 transition duration-300"/>
+                        <button class="-ml-4 group-hover:ml-0 transition duration-300">
+                            <i class="fas fa-search group-hover:text-gega-red"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="flex items-center space-x-8 text-lg">
+                    <a href="#">Login</a>
+                    <a href="#" class="bg-gega-red px-3 py-1 hover:bg-rose-600 hover:text-gega-grey cursor-pointer duration-300">Sign Up</a>
+                </div>
+            </div>
+        </nav>
+    </div>
 
-    <h6 class="font-open text-gega-melon">Welcome to your new app.</h6>
-</div>
-
+</header>
