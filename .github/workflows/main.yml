@@ -25,15 +25,16 @@ jobs:
       - name: Install .NET WASM Build Tools
         run: dotnet workload install wasm-tools
       - uses: actions/checkout@v2
+      
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20.x'
-      - run: npm install
-      - name: Install dependencies
-        run: |
-          cd src/WebApp/Styles
-          npm install
+
+      - name: Install Node.js dependencies
+        run: npm install
+        working-directory: src/WebApp/Styles
+      
       # Publishes Blazor project to the release-folder
       - name: Publish .NET Core Project
         run: dotnet publish ./src/WebApp/WebApp.csproj -c:Release -p:GHPages=true -o dist/Web --nologo
