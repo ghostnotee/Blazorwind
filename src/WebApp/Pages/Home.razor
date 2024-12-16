@@ -3,15 +3,27 @@
 <PageTitle>Home</PageTitle>
 
 @* Header section *@
-<header class="bg-black py-12 text-gega-grey font-gemunu">
+<header class="bg-black py-6 lg:py-12  text-gega-grey">
     @* Header Container *@
-    <div class="container flex items-center justify-between space-x-16">
+    <div class="container flex items-center justify-between space-x-8 lg:space-x-16">
         @* Logo *@
-        <a href="#" class="text-6xl font-bold text-transparent bg-gradient-to-r bg-clip-text from-gega-red to-gega-grey">ghostNoté</a>
+        <a href="#" class="pl-4 md:pl-0 text-4xl lg:text-6xl font-bold text-transparent bg-gradient-to-r 
+           bg-clip-text from-gega-red to-gega-grey">ghostNoté</a>
+
+        @* Mobile Menu *@
+        <div class="block md:hidden pr-4">
+            <div class="space-y-1 cursor-pointer">
+                <div class="bg-gega-grey w-8 h-1 rounded-full"></div>
+                <div class="bg-gega-grey w-8 h-1 rounded-full"></div>
+                <div class="bg-gega-grey w-8 h-1 rounded-full"></div>
+            </div>
+        </div>
+
+
         @* Navigation *@
-        <nav class="flex justify-between flex-1">
+        <nav class="hidden md:flex justify-between flex-1">
             @* Menu *@
-            <div class="flex items-center text-lg space-x-8">
+            <div class="flex items-center lg:text-lg space-x-4 lg:space-x-8">
                 <a href="#" class="hover:text-gega-melon duration-300">movies</a>
                 <a href="#" class="hover:text-gega-melon duration-300">celebrities</a>
                 <a href="#" class="hover:text-gega-melon duration-300">blog</a>
@@ -19,23 +31,48 @@
                 <a href="#" class="hover:text-gega-melon duration-300">about</a>
             </div>
             @* Login area *@
-            <div class="flex items-center space-x-8">
+            <div class="flex items-center space-x-4 lg:space-x-8">
                 @* Search area *@
                 <form>
                     <div class="group border-r border-gega-red px-4 mx-4 py-1">
-                        <input type="text" class="opacity-0 group-hover:opacity-100 bg-transparent border-b border-gega-red focus:outline-none 
-                                w-44 transition duration-300"/>
-                        <button class="-ml-4 group-hover:ml-0 transition duration-300">
+                        <input type="text" class="opacity-0 group-hover:opacity-100 bg-transparent border-b 
+                        border-gega-red focus:outline-none w-24 lg:w-44 duration-300"/>
+                        <button class="-ml-4 group-hover:ml-0 duration-300">
                             <i class="fas fa-search group-hover:text-gega-red"></i>
                         </button>
                     </div>
                 </form>
-                <div class="flex items-center space-x-8 text-lg">
+                @* Signup area *@
+                <div class="flex items-center space-x-4 lg:space-x-8 text-lg">
                     <a href="#">Login</a>
-                    <a href="#" class="bg-gega-red px-3 py-1 hover:bg-rose-600 hover:text-gega-grey cursor-pointer duration-300">Sign Up</a>
+                    <a href="#"
+                       class="bg-gega-red px-3 py-1 hover:bg-rose-600 hover:text-gega-grey cursor-pointer duration-300 whitespace-nowrap">
+                        Sign Up
+                    </a>
                 </div>
             </div>
         </nav>
     </div>
 
 </header>
+
+@* Hero Section *@
+<section class="h-128 group relative">
+    @* Hero Image *@
+    <img src="./Images/batman.jpg" alt="Main Image" class="h-full w-full object-cover">
+    @* Hero Content *@
+    <div class="absolute bottom-0 w-full bg-gradient-to-b from-transparent to-black">
+        @* Hero content container *@
+        <div class="container">
+            <h3 class="text-gega-melon tracking-wider group-hover:mb-1 duration-500">
+                Action, Drama, Thriller
+            </h3>
+            <h1 class="text-6-xl text-gega-grey group-hover:mb-1 duration-300">The Dark Knight</h1>
+            <p class="text-gega-grey group-hover:mb-2 duration-300 w-2/3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus beatae
+                cupiditate eius eligendi ex facilis odit officia sapiente ut voluptatibus. Aperiam architecto atque ipsam iure laboriosam laudantium,
+                magni sapiente similique!</p>
+            @* Detail Container *@
+            <div class="flex space-x-8 opacity-0 group-hover:opacity-100 group:hover:mb-20 duration-500"></div>
+        </div>
+    </div>
+</section>

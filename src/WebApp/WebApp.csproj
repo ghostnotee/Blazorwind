@@ -15,6 +15,10 @@
   <ItemGroup>
     <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Images\batman.jpg" />
+  </ItemGroup>
   
   <Target Name="StylesCompile" BeforeTargets="BeforeBuild" Condition="true">
     <Exec Command="npm run --prefix Styles build:css" />
