@@ -1,5 +1,8 @@
-name: Build, Test, and Deploy
+name: build and test and deploy
 
+permissions:
+  contents: write
+  
 on:
   push:
     branches:
@@ -17,14 +20,14 @@ jobs:
 
       # Install .NET Core SDK
       - name: Setup .NET Core
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v4.1.0
         with:
           dotnet-version: 9.0.x
           
       # Install dotnet wasm buildtools workload
       - name: Install .NET WASM Build Tools
         run: dotnet workload install wasm-tools
-
+        
       # Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -40,15 +43,15 @@ jobs:
       - name: Build CSS with Tailwind
         run: npm run build:css
         working-directory: src/WebApp/Styles
-      
-      # Publish Blazor Project
+          
+      # Publishes Blazor project to the release-folder
       - name: Publish .NET Core Project
         run: dotnet publish ./src/WebApp/WebApp.csproj -c:Release -p:GHPages=true -o dist/Web --nologo
-
+      
       # Commit wwwroot to GitHub Pages
-      - name: Deploy to GitHub Pages
+      - name: Commit wwwroot to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          TOKEN_GITHUB: ${{ secrets.TOKEN_GITHUB }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
           FOLDER: dist/Web/wwwroot
