@@ -37,12 +37,12 @@ jobs:
       # Install Node.js dependencies
       - name: Install Node.js dependencies
         run: npm install
-        working-directory: ./src/WebApp/Styles
+        working-directory: src/WebApp/Styles
 
       # Build CSS (Tailwind or other processors)
       - name: Build CSS with Tailwind
         run: npm run build:css
-        working-directory: ./src/WebApp/Styles
+        working-directory: src/WebApp/Styles
           
       # Publishes Blazor project to the release-folder
       - name: Publish .NET Core Project
