@@ -46,7 +46,7 @@ jobs:
           
       # Publishes Blazor project to the release-folder
       - name: Publish .NET Core Project
-        run: dotnet publish ./src/WebApp.csproj -c:Release -p:GHPages=true -o dist/Web --nologo
+        run: dotnet publish ./src/WebApp/WebApp.csproj -c:Release -p:GHPages=true -o dist/Web --nologo
       
       # Commit wwwroot to GitHub Pages
       - name: Commit wwwroot to GitHub Pages
