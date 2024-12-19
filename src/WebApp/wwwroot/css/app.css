@@ -529,6 +529,12 @@ video {
 .bottom-0 {
   bottom: 0px;
 }
+.bottom-5 {
+  bottom: 1.25rem;
+}
+.left-10 {
+  left: 2.5rem;
+}
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -548,20 +554,26 @@ video {
 .h-1 {
   height: 0.25rem;
 }
-.h-128 {
-  height: 32rem;
+.h-3 {
+  height: 0.75rem;
 }
 .h-8 {
   height: 2rem;
 }
+.h-96 {
+  height: 24rem;
+}
 .h-full {
   height: 100%;
 }
-.w-2\/3 {
-  width: 66.666667%;
-}
 .w-24 {
   width: 6rem;
+}
+.w-3 {
+  width: 0.75rem;
+}
+.w-3\/4 {
+  width: 75%;
 }
 .w-8 {
   width: 2rem;
@@ -591,6 +603,11 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
@@ -684,6 +701,9 @@ video {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+.pl-10 {
+  padding-left: 2.5rem;
+}
 .pl-4 {
   padding-left: 1rem;
 }
@@ -697,13 +717,13 @@ video {
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
-}
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 .font-bold {
   font-weight: 700;
@@ -737,6 +757,9 @@ video {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+.duration-1000 {
+  transition-duration: 1000ms;
 }
 .duration-300 {
   transition-duration: 300ms;
@@ -848,6 +871,9 @@ code {
 .group:hover .group-hover\:mb-1 {
   margin-bottom: 0.25rem;
 }
+.group:hover .group-hover\:mb-10 {
+  margin-bottom: 2.5rem;
+}
 .group:hover .group-hover\:mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -877,6 +903,22 @@ code {
 }
 @media (min-width: 1024px) {
 
+  .lg\:h-128 {
+    height: 32rem;
+  }
+
+  .lg\:h-4 {
+    height: 1rem;
+  }
+
+  .lg\:w-2\/3 {
+    width: 66.666667%;
+  }
+
+  .lg\:w-4 {
+    width: 1rem;
+  }
+
   .lg\:w-44 {
     width: 11rem;
   }
@@ -898,13 +940,26 @@ code {
     padding-bottom: 3rem;
   }
 
+  .lg\:pl-0 {
+    padding-left: 0px;
+  }
+
   .lg\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
   }
 
+  .lg\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
   .lg\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .group:hover .lg\:group-hover\:mb-20 {
+    margin-bottom: 5rem;
   }
 }
